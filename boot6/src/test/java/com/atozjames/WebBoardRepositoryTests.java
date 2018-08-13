@@ -27,24 +27,24 @@ public class WebBoardRepositoryTests {
 	@Autowired
 	WebBoardRepository repo;
 
-//	@Test
-//	public void insertBoardDummies() {
-//
-//		IntStream.range(0, 300).forEach(i -> {
-//
-//			WebBoard board = new WebBoard();
-//
-//			board.setTitle("Sample Board Title " + i);
-//			board.setContent("Content Sample ..." + i + " of Board ");
-//			board.setWriter("user0" + (i % 10));
-//
-//			repo.save(board);
-//		});
-//
-//	}
-	
-	
 	@Test
+	public void insertBoardDummies() {
+
+		IntStream.range(0, 300).forEach(i -> {
+
+			WebBoard board = new WebBoard();
+
+			board.setTitle("Sample Board Title " + i);
+			board.setContent("Content Sample ..." + i + " of Board ");
+			board.setWriter("user0" + (i % 10));
+
+			repo.save(board);
+		});
+
+	}
+	
+	
+/*	@Test
 	public void testList1() {
 
 		Pageable pageable = PageRequest.of(0, 20, Direction.DESC, "bno");
@@ -55,16 +55,16 @@ public class WebBoardRepositoryTests {
 
 		log.info("----------------------");
 
-//		log.info("PageNumber: " + result.getPageable().getPageNumber());
-//
-//		log.info("TotalPages " + result.getTotalPages());
-//
-//		log.info("" + result.getPageable());
+		log.info("PageNumber: " + result.getPageable().getPageNumber());
+
+		log.info("TotalPages " + result.getTotalPages());
+
+		log.info("" + result.getPageable());
 
 		result.getContent().forEach(board -> log.info("" + board));
 		
 
 	}
-
+*/
 
 }
